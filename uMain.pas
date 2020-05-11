@@ -24,7 +24,7 @@ type
   T_win_message = record
     description: string;
     id: T_mqtt_msg_id;
-    rc: Integer; // Êîä ñ ïðè÷èíîé âûçîâà
+    rc: Integer; // ÃŠÃ®Ã¤ Ã± Ã¯Ã°Ã¨Ã·Ã¨Ã­Ã®Ã© Ã¢Ã»Ã§Ã®Ã¢Ã 
     mosquitto_message: P_mosquitto_message;
   end;
 
@@ -135,7 +135,7 @@ begin
   f_will_payload_len := SysUtils.StrLen(PChar(f_will_payload));
   f_user_name := '';
   f_user_password := '';
-  f_hostname := '34.68.181.212';
+  f_hostname := 'localhost';
   f_port := 1883;
   f_keepalive := 60;
 
@@ -211,7 +211,7 @@ begin
       else
         errdesc := 'Unknown error';
       end;
-      MessageBox(0, PChar('θ衪࠳񲠭蠕ser name 蠐assword: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
+      MessageBox(0, PChar('Î¸è¡ªà ³ñ² ­î¢ªè •ser name è assword: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
       Abort;
     end;
 
@@ -228,7 +228,7 @@ begin
       else
         errdesc := 'Unknown error';
       end;
-      MessageBox(0, PChar('θ衪࠱譥򟰺 ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
+      MessageBox(0, PChar('Î¸è¡ªà ±î¥¤è­¥òŸ°º ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
       Screen.Cursor := crDefault;
       Abort;
     end;
@@ -387,7 +387,7 @@ begin
      else
      errdesc := 'Unknown error';
      end;
-     MessageBox(0, PChar('Error de tiempo de ejecuci�n de Subsribe: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
+     MessageBox(0, PChar('Error de tiempo de ejecución de Subsribe: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
      Abort;
 end;
 
@@ -580,7 +580,7 @@ begin
   else
 	errdesc := 'Unknown error';
   end;
-  MessageBox(0, PChar('Error de tiempo de ejecuci󮠐ublish: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
+  MessageBox(0, PChar('Error de tiempo de ejecució® ublish: ' + errdesc), 'Error', MB_ICONWARNING or MB_OK);
   Abort;
   end;
 
@@ -608,7 +608,7 @@ begin
 
   if f_mosq = Nil then
   begin
-    MessageBox(0, PChar('Error al inicializar la sesi�n del cliente MQTT'),PChar('Error'), MB_ICONWARNING or MB_OK);
+    MessageBox(0, PChar('Error al inicializar la sesión del cliente MQTT'),PChar('Error'), MB_ICONWARNING or MB_OK);
     Abort;
   end;
 
